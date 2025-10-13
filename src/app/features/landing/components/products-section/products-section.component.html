@@ -1,0 +1,19 @@
+<section class="py-16 sm:py-24 bg-sand/50 rounded-xl" id="productos">
+  <div class="text-center">
+    <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-text-light">
+      Nuestro Pescado Fresco: Bagre, Bocachico y más
+    </h2>
+  </div>
+  <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    @for (product of products; track product.id) {
+      <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+  <div class="mt-12 text-center">
+    <a
+      class="inline-block rounded-full bg-accent px-8 py-3 text-base font-bold text-white transition-all duration-300 hover:bg-orange-500 hover:shadow-lg active:scale-95"
+      href="#"
+      >Más Información del Pescado</a
+    >
+  </div>
+</section>
