@@ -12,6 +12,11 @@ export const routes: Routes = [
         redirectTo: 'home',
         pathMatch: 'full',
       },
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./features/landing/landing.routes').then((m) => m.LANDING_ROUTES),
+      },
     ],
   },
 ];
