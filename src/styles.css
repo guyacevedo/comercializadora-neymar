@@ -1,5 +1,67 @@
+/* Importa las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
 /* Framework CSS */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* CRITICAL for CDK Overlays/Dialogs/Tooltips */
 @import '@angular/cdk/overlay-prebuilt.css';
+
+@theme {
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --color-primary: #38bdf8; /* Sky-400 */
+  --color-primary-dark: #0ea5e9; /* Sky-600 */
+  --color-secondary: #2dd4bf; /* Teal-400 */
+  --color-accent: #fb923c; /* Orange-400 */
+  --color-backgraund-light: #f8fafc; /* Slate-100 */
+  --color-text-light: #0f172a; /* Slate-900 */
+  --color-text-secondary-light: #475569; /* Slate-600 */
+  --color-sand: #fef3c7; /* Amber-100 */
+
+  --radius-default: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.carousel-item {
+  display: none;
+  transition: opacity 0.7s ease-in-out;
+}
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+.testimonial-carousel-item {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+.testimonial-carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #0ea5e9;
+  transition:
+    width 0.3s ease-in-out,
+    left 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}

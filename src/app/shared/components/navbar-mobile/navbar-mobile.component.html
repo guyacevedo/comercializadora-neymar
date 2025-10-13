@@ -1,0 +1,27 @@
+<nav>
+  <ul class="flex flex-col items-start space-y-2 px-8 pt-4">
+    @for (item of navItems; track item.title) {
+      <li class="w-full">
+        <a
+          class="nav-link text-sm font-semibold text-text-secondary-light hover:text-primary-dark"
+          [routerLink]="item.href"
+          [attr.tabindex]="isMenuOpen() ? 0 : -1"
+          [attr.aria-label]="item.ariaLabel"
+          >{{ item.title }}</a
+        >
+      </li>
+    }
+  </ul>
+  <!-- Actions -->
+  <div class="flex items-center justify-center mt-8">
+    <!-- WhatsApp -->
+    <a
+      class="inline-flex w-full sm:hidden items-center justify-center gap-2  bg-accent px-4 py-2 text-sm font-bold text-white transition-all duration-300 hover:bg-orange-500 hover:shadow-md active:scale-95"
+      href="https://wa.me/{{telefono}}"
+      target="_blank"
+    >
+      <app-svg-icon icon="whatsapp" size="20px" viewBox="simpleIcons"></app-svg-icon>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</nav>
