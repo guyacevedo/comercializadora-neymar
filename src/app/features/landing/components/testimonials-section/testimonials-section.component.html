@@ -1,60 +1,8 @@
 <section class="py-16 sm:py-24 bg-sand/50 rounded-xl" id="testimonios">
   <div class="text-center">
     <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-text-light">
-      Testimonios de Clientes
+      {{title}}
     </h2>
   </div>
-  <div class="mt-12 relative max-w-3xl mx-auto">
-    <div class="overflow-hidden relative h-[300px]" id="testimonial-carousel">
-      @for (testimonial of testimonials; track testimonial.author; let i = $index) {
-        <div
-          class="testimonial-carousel-item absolute w-full transition-opacity duration-500 ease-in-out"
-          [class.active]="isTestimonialActive()(i)"
-        >
-          <div class="bg-white p-8 rounded-lg text-center border border-slate-200 shadow-sm">
-            <img
-              [alt]="'Foto de ' + testimonial.author"
-              class="w-20 h-20 rounded-full mx-auto mb-4"
-              [src]="testimonial.imageSrc"
-            />
-            <div class="flex justify-center text-yellow-400 mb-4">
-              @for (star of getRatingStars()(testimonial.rating); track $index) {
-                <app-svg-icon [icon]="'error'" class="w-6 h-6"></app-svg-icon>
-              }
-            </div>
-            <blockquote class="text-text-secondary-light italic text-lg font-body">
-              "{{ testimonial.quote }}"
-            </blockquote>
-            <cite class="mt-4 block font-bold text-text-light not-italic font-display">
-              {{ testimonial.author }}, {{ testimonial.title }}
-            </cite>
-          </div>
-        </div>
-      }
-    </div>
-
-    <button
-      class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-12 bg-white/50 hover:bg-white rounded-full p-2 text-text-light transition-all duration-300 active:scale-90 z-10"
-      (click)="prevTestimonial()"
-    >
-      <app-svg-icon icon="error" class="w-6 h-6"></app-svg-icon>
-    </button>
-
-    <button
-      class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-12 bg-white/50 hover:bg-white rounded-full p-2 text-text-light transition-all duration-300 active:scale-90 z-10"
-      (click)="nextTestimonial()"
-    >
-     <app-svg-icon icon="error" class="w-6 h-6"></app-svg-icon>
-    </button>
-
-    <div class="flex justify-center gap-2 mt-8" id="carousel-dots">
-      @for (testimonial of testimonials; track $index) {
-        <button
-          class="w-3 h-3 rounded-full transition-colors duration-300"
-          [class]="getDotClass()($index)"
-          (click)="showTestimonial($index)"
-        > </button>
-      }
-    </div>
-  </div>
+  <app-testimonials-carousel [testimonials]="testimonials"></app-testimonials-carousel>
 </section>

@@ -14,18 +14,19 @@ export interface AdvantageItem {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdvantagesSectionComponent {
+  readonly title = 'Ventajas Competitivas';
   advantages: AdvantageItem[] = [
     {
-      icon: 'error',
+      icon: 'phishing',
       description: 'Pescado fresco del día',
     },
     {
-      icon: 'error',
+      icon: 'handshake',
       description: 'Trato directo con pescadores',
     },
     {
-      icon: 'error',
-      description: 'Entregas rápidas en Bolívar',
+      icon: 'localShipping',
+      description: 'Entregas rápidas en Magangué',
     },
   ];
 }

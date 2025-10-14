@@ -2,21 +2,14 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
     <div class="order-2 md:order-1">
       <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-text-light">
-        Nuestra Historia: Pasión por el Pescado Ribereño
+        {{ title }}
       </h2>
       <p class="mt-6 text-lg text-text-secondary-light font-body">
-        Pesquera NEYMAR es una empresa familiar con décadas de tradición en la comercialización de
-        pescado ribereño fresco del río Magdalena. Nuestro compromiso es con la calidad, la
-        sostenibilidad y el apoyo a las comunidades de pescadores locales en Magangué, corazón de la
-        pesca en Colombia.
+        {{ summary }}
       </p>
     </div>
     <div class="order-1 md:order-2">
-      <img
-        alt="Pescadores artesanales en el río Magdalena, Colombia"
-        class="w-full h-auto rounded-lg shadow-lg"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ--6zdY_TbsbtyyFPyLvABh1vAqzoxfH337OfjNjf722Zo7cS1vqvZ7ir60imbkFKXIAoaJKk1G-YQzEEkpcad-Q3ChCC9H2YtXvcwfFvAuP3CTuZIAbN1f5jJQJ9i2rTIPwLm2g1HQQuD_9r4hjppvfrdS_9inMfyvA-38PqafTakwXlxlNqImjOhkcFrdkPVjmJz_M93Vm7mMvJl6O3KKwuU_jrxBsTpzNhMRJ_i_PAHbNHZLbn9vwXzFBTq8_lOvuRMuB_5hU"
-      />
+      <img [alt]="image.ariaLabel" [src]="image.src" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
   </div>
 </section>

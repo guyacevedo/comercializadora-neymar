@@ -9,6 +9,7 @@ import { NewsItem } from '../../../../core/models/news-item.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NewsSectionComponent {
+  readonly title = 'Nuestras últimas novedades';
   readonly newsItems: NewsItem[] = [
     {
       id: '0',

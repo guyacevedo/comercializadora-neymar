@@ -15,21 +15,24 @@ export interface Service {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ServicesSectionComponent {
-  services: Service[] = [
+  readonly title = 'Nuestros Servicios';
+  readonly summary = `Ofrecemos soluciones integrales para la comercialización de productos del mar, adaptándonos a
+      las necesidades de cada cliente.`;
+  readonly services: Service[] = [
     {
-      icon: 'error',
+      icon: 'localShipping',
       title: 'Venta al por Mayor',
       description:
         'Ofrecemos precios competitivos y volumen para distribuidores, comerciantes y restaurantes. Garantizamos frescura y entrega a tiempo para su negocio.',
     },
     {
-      icon: 'error',
+      icon: 'shopping_bag',
       title: 'Venta al Detal',
       description:
         'Atención personalizada para consumidores finales. Incluye preparación, limpieza y empaque especial para que disfrute del mejor pescado en casa.',
     },
     {
-      icon: 'error',
+      icon: 'map',
       title: 'Logística y Entrega Eficiente',
       description:
         'Entregas rápidas y confiables en ciudades principales de Colombia. ¡Domicilios gratuitos en Magangué y zonas cercanas!',
