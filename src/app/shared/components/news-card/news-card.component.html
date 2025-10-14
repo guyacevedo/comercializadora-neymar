@@ -1,0 +1,26 @@
+<div
+  class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+>
+  <img
+    alt="Bagre fresco"
+    class="w-full h-48 object-cover rounded-lg mb-4"
+    [src]="newsItem().imageUrl || placeholderImage"
+  />
+  <p class="text-sm text-text-secondary-light mb-2 font-body">
+    {{ newsItem().publishedDate | date: 'dd de MMMM, yyyy' }}
+  </p>
+  <h3 class="text-lg font-bold text-text-light flex-grow font-display">
+    {{ newsItem().title }}
+  </h3>
+  <p class="text-text-secondary-light my-2 font-body">
+    {{ newsItem().summary }}
+  </p>
+  <div class="mt-auto pt-4">
+    @for (item of newsItem().tags; track item) {
+      <span
+        class="inline-block bg-primary/10 text-primary-dark text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full"
+        >#{{ item }}</span
+      >
+    }
+  </div>
+</div>
