@@ -3,10 +3,11 @@ import { HeroSectionComponent } from "../../components/hero-section/hero-section
 import { AboutSectionComponent } from "../../components/about-section/about-section.component";
 import { ProductsSectionComponent } from "../../components/products-section/products-section.component";
 import { ServicesSectionComponent } from "../../components/services-section/services-section.component";
+import { AdvantagesSectionComponent } from "../../components/advantages-section/advantages-section.component";
 
 @Component({
   selector: 'app-home-page',
-  imports: [HeroSectionComponent, AboutSectionComponent, ProductsSectionComponent, ServicesSectionComponent],
+  imports: [HeroSectionComponent, AboutSectionComponent, ProductsSectionComponent, ServicesSectionComponent, AdvantagesSectionComponent],
   templateUrl: './home-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
