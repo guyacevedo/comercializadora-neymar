@@ -1,0 +1,30 @@
+<section class="py-16 sm:py-24" id="contacto">
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+    <div class="lg:col-span-2 flex flex-col gap-6">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-text-light">Contáctanos</h2>
+      <div>
+        <p class="text-lg text-text-secondary-light font-body">Para pedidos y cotizaciones:</p>
+        <a class="mt-4 inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+          href="https://wa.me/{{ whatsapp }}" target="_blank">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.205.323-1.205 4.383 4.536-1.187.351.208zm8.742-6.797c-.119-.244-.435-.386-.719-.427-.282-.04-.666-.041-.95-.041-.283 0-.747-.024-1.134.309-.386.333-.581.77-.581 1.481s.215 1.538.486 1.81.564.426 1.369.839c.802.413 1.341.636 1.701.817.359.18.672.15.918-.088.246-.239.999-1.17.999-2.225s-.351-1.636-.57-1.81z">
+            </path>
+          </svg>
+          <span>Contactar por WhatsApp</span>
+        </a>
+        <p class="mt-3 text-text-secondary-light font-body">o llámanos al <span
+            class="font-semibold text-text-light">{{ telefono }}</span></p>
+      </div>
+      <div class="space-y-3 text-text-secondary-light font-body">
+        <p><span class="font-semibold text-text-light">Ubicación:</span> {{ ubicacion }}</p>
+        <p><span class="font-semibold text-text-light">Correo:</span> {{ email }}</p>
+      </div>
+    </div>
+    <div class="lg:col-span-3 aspect-[4/3] w-full rounded-lg overflow-hidden shadow-lg">
+      <iframe class="w-full h-full" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125303.49310860541!2d-74.84964593846618!3d9.252033694073338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e58e0a30b42c67d%3A0x6b8764e62d47348e!2sMagangu%C3%A9%2C%20Bol%C3%ADvar%2C%20Colombia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+        style="border:0;" title="Mapa de ubicación"></iframe>
+    </div>
+  </div>
+</section>
