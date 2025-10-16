@@ -19,4 +19,10 @@ export const routes: Routes = [
       },
     ],
   },
+  // Not Found Page
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./features/errors/pages/not-found/not-found.page').then((m) => m.NotFoundPage),
+  },
 ];

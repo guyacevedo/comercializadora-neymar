@@ -97,12 +97,12 @@ export class AboutPageComponent {
     },
     {
       icon: 'localShipping',
-      title: 'Logística Confiable<',
+      title: 'Logística Confiable',
       summary: 'Garantizamos la cadena de frío para una entrega puntual y segura en todo el país.',
     },
     {
       icon: 'globe',
-      title: 'obertura Nacional',
+      title: 'Cobertura Nacional',
       summary: 'Llevamos la riqueza del pescado ribereño colombiano a todos los rincones del país.',
     },
   ];
