@@ -9,11 +9,11 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: '',
         pathMatch: 'full',
       },
       {
-        path: 'home',
+        path: '',
         loadChildren: () =>
           import('./features/landing/landing.routes').then((m) => m.LANDING_ROUTES),
       },

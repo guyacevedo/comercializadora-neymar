@@ -18,12 +18,12 @@ export const APP_SHARED_INFO = {
     {
       title: 'Inicio',
       ariaLabel: 'Abrir Sección principal',
-      href: '/inicio',
+      href: '',
     },
     {
       title: 'Nosotros',
       ariaLabel: 'Abrir Sección sobre Nosotros',
-      href: '/info/nosotros',
+      href: '/nosotros',
     },
     {
       title: 'Productos',

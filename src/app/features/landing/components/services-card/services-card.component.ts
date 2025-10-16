@@ -10,6 +10,6 @@ import { SvgIconComponent } from '../../../../shared/icons/svg-icon.component';
 })
 export class ServicesCardComponent {
   icon = input<keyof typeof ICON_PATHS>('error');
-  title = input<string | null>(null);
-  description = input<string | null>(null);
+  title = input<string>('Title');
+  description = input<string>('Description');
 }

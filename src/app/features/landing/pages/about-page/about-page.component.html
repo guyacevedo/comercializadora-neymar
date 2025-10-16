@@ -1,0 +1,81 @@
+<article class="max-w-4xl mx-auto py-12 sm:py-16">
+  <div class="w-full h-80 rounded-xl overflow-hidden shadow-lg mb-8">
+    <img
+      [alt]="image.ariaLabel"
+      class="w-full h-full object-cover object-center"
+      [src]="image.src"
+    />
+  </div>
+  <div class="text-center">
+    <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-text-light">
+      {{ title }}
+    </h1>
+    <p class="mt-4 text-lg sm:text-xl text-text-secondary-light font-body">
+      {{ subTitle }}
+    </p>
+  </div>
+  <div
+    class="mt-12 prose prose-lg max-w-none font-body text-text-secondary-light"
+    [innerHTML]="summary"
+  ></div>
+  <div class="mt-16 space-y-12">
+    <section>
+      <h2
+        class="font-display text-3xl font-bold text-text-light border-b-2 border-primary-dark pb-2 mb-4"
+      >
+        Nuestra Misión
+      </h2>
+      <p class="text-lg text-text-secondary-light font-body">
+        {{ missionSummary }}
+      </p>
+    </section>
+    <section>
+      <h2
+        class="font-display text-3xl font-bold text-text-light border-b-2 border-primary-dark pb-2 mb-4"
+      >
+        Nuestra Visión
+      </h2>
+      <p class="text-lg text-text-secondary-light font-body">
+        {{ vissionSummary }}
+      </p>
+    </section>
+    <section>
+      <h2
+        class="font-display text-3xl font-bold text-text-light border-b-2 border-primary-dark pb-2 mb-4"
+      >
+        Nuestros Valores
+      </h2>
+      <ul class="mt-6 space-y-6">
+        @for (item of ourValues; track item.title) {
+          <li class="flex items-start gap-4">
+            <app-svg-icon [icon]="item.icon" size="48px" class="text-primary mt-1"></app-svg-icon>
+            <div>
+              <h3 class="font-bold text-xl text-text-light font-display">{{ item.title }}</h3>
+              <p class="text-text-secondary-light font-body">
+                {{ item.summary }}
+              </p>
+            </div>
+          </li>
+        }
+      </ul>
+    </section>
+    <section class="mt-16 bg-sand/50 p-8 rounded-xl">
+      <h2 class="font-display text-3xl font-bold text-center text-text-light mb-8">
+        ¿Por qué elegir Pesquera NEYMAR?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @for (item of ourAdvantages; track item.title) {
+          <div
+            class="flex flex-col items-center text-center p-6 rounded-lg bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300"
+          >
+            <app-svg-icon [icon]="item.icon" size="48px" class="text-accent mb-4"></app-svg-icon>
+            <h4 class="font-semibold text-text-light text-lg">{{ item.title }}</h4>
+            <p class="text-text-secondary-light text-sm mt-1">
+              {{ item.summary }}
+            </p>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</article>
